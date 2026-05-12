@@ -103,9 +103,9 @@ export default function Contact() {
             <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 18 }}>
               {(
                 [
-                  ['Email',    'tristan@thoang.co'],
-                  ['Calendar', 'cal.com/tristan-hoang/30min'],
-                  ['LinkedIn', 'linkedin.com/in/tristanhoang'],
+                  ['Email',    'tristanhoang1991@gmail.com'],
+                  ['Calendar', ' '],
+                  ['LinkedIn', 'linkedin.com/in/dhoang-creator'],
                   ['Based in', 'Bristol, UK · GMT'],
                 ] as [string, string][]
               ).map(([k, v]) => (

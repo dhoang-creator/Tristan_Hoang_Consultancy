@@ -28,7 +28,7 @@ export default function Footer() {
               lineHeight: 1.55,
             }}
           >
-            Independent automation and operations consulting. Trading as Hoang Consulting Limited.
+            Independent automation and operations consulting. Trading as Tristan Hoang | Workflow and Optimisations Consultant.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
           [
             ['Site',       ['About', 'Services', 'Work', 'Gallery', 'Journal', 'Contact']],
             ['Elsewhere',  ['LinkedIn', 'Read.cv', 'GitHub', 'RSS']],
-            ['Office',     ['Bristol, UK', 'tristan@thoang.co']],
+            ['Office',     ['Bristol, UK']],
           ] as [string, string[]][]
         ).map(([heading, items]) => (
           <div key={heading}>

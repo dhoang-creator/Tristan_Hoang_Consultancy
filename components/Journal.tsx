@@ -206,8 +206,8 @@ export default function Journal() {
                 maxWidth: '16ch',
               }}
             >
-              Notes from the{' '}
-              <span className="serif">practice.</span>
+              Notes and thoughts from the{' '}
+              <span className="serif">work.</span>
             </h2>
 
             {/* Tag filter */}
