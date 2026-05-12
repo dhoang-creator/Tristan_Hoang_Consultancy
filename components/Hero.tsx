@@ -128,9 +128,9 @@ export default function Hero({ onJump }: HeroProps) {
         >
           {(
             [
-              ['11', 'years in operations'],
-              ['38', 'engagements completed'],
-              ['—', 'employees. Just me.'],
+              ['5', 'years in operations'],
+              ['12', 'engagements completed'],
+              ['1', 'employees. Just me.'],
               ['2 wks', 'typical lead time'],
             ] as [string, string][]
           ).map(([n, l], i) => (
