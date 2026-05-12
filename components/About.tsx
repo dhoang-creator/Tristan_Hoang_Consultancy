@@ -104,10 +104,10 @@ export default function About() {
               }}
             >
               <p style={{ margin: '0 0 20px' }}>
-                [Bio copy to be added — replace with Tristan&rsquo;s bio before launch.]
+                I've worked with ambitious Dutch startups and scale-ups to strip away operation bloat. Together, we've been able to identify where processes are dragging, then I engineer real solutions, using software, AI and smart problem-solving, that frees up time, cuts costs and unlocks growth. The result? Businesses that move faster and smarter.
               </p>
               <p style={{ margin: 0 }}>
-                [Second paragraph.]
+                Most consultants add another layer of cost. I do the opposite. I work with UK businesses to find the inefficiencies that are already costing you money, hidden in manual processes, repeated work and systems that don't talk to each other. By streamlining operations and automating what shouldn't be done by hand, we recover time and resources you can reinvest immediately. No lengthy engagements, No astronomical fees. Just concrete improvements to your bottom line that pays for themselves.
               </p>
             </div>
 
