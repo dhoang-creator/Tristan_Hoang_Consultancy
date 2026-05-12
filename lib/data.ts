@@ -36,7 +36,7 @@ export interface GalleryItem {
 export const SERVICES: Service[] = [
   {
     no: '01',
-    name: 'Process Automation',
+    name: 'Process Automation & Workflow Audits',
     summary:
       'Replace repetitive manual work with reliable, auditable workflows — from finance ops to onboarding.',
     deliverables: [
@@ -45,11 +45,11 @@ export const SERVICES: Service[] = [
       'Custom Python services',
       'Handover documentation',
     ],
-    duration: '2–6 weeks',
+    duration: '2-5 days',
   },
   {
     no: '02',
-    name: 'Systems Optimisation',
+    name: 'Implementation Strategy',
     summary:
       'Re-shape the tool stack so data flows cleanly between CRM, finance, and operations — no more swivel-chair updates.',
     deliverables: [
@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
   },
   {
     no: '04',
-    name: 'Fractional Ops Lead',
+    name: 'Fractional AI Lead',
     summary:
       'Ongoing leadership for teams of 10–80 — owning the operating cadence, the metrics, and the next bottleneck.',
     deliverables: [

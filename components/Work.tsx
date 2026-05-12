@@ -38,7 +38,7 @@ export default function Work() {
           }}
         >
           Three engagements from the{' '}
-          <span className="serif">last twelve months.</span>
+          <span className="serif">last twenty-four months.</span>
         </h2>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>

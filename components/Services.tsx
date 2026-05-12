@@ -55,7 +55,7 @@ export default function Services({ onJump }: ServicesProps) {
               maxWidth: '14ch',
             }}
           >
-            Four ways I usually{' '}
+            Four ways I {' '}
             <span className="serif">show up.</span>
           </h2>
           <p

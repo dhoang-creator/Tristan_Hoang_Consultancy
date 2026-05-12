@@ -33,8 +33,8 @@ const SERVICES = [
 
 const CASES = [
   {
-    client: 'Marlow & Finch Accounting',
-    sector: 'Professional services',
+    client: 'IKEA Dutch/European Service Office',
+    sector: 'Logistics & Retail',
     headline: 'Closed the books 4 days faster, every month.',
     body: 'Re-platformed the month-end close from spreadsheets onto a Xero + Airtable backbone with automated reconciliations. 38 hours of monthly work eliminated.',
     metric: '−68%',
