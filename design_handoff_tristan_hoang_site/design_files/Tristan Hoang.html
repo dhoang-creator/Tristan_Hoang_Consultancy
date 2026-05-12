@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tristan Hoang — Automation &amp; Optimisation Consultant</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --paper:#f0eee9;
+      --paper-2:#e8e5dd;
+      --ink:#0F1422;
+      --ink-mute:#3a4053;
+      --navy:#0B2545;
+      --navy-2:#134074;
+      --silver:#D9DCE1;
+      --silver-2:#494E57;
+      --accent:oklch(0.68 0.14 50);
+      --accent-soft:oklch(0.92 0.04 60);
+      --rule:rgba(15,20,34,.12);
+      --rule-strong:rgba(15,20,34,.22);
+    }
+    *{box-sizing:border-box}
+    html{background:var(--paper);scroll-behavior:smooth}
+    html,body{margin:0;padding:0;color:var(--ink);font-family:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body{background:transparent;overflow-x:hidden;position:relative}
+
+    /* ── Bold background layer ────────────────────────────── */
+    .bg-layer{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+    .bg-layer::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.08 0 0 0 0 0.14 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");opacity:.18;mix-blend-mode:multiply}
+
+    /* Variant 1: Topographic — flowing contour lines */
+    .bg-topo .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55}
+    .bg-topo .b1{width:680px;height:680px;background:radial-gradient(circle,#0B2545 0%,transparent 70%);top:-180px;left:-180px}
+    .bg-topo .b2{width:540px;height:540px;background:radial-gradient(circle,#134074 0%,transparent 70%);bottom:-160px;right:-120px;opacity:.4}
+    .bg-topo .b3{width:420px;height:420px;background:radial-gradient(circle,oklch(0.68 0.14 50) 0%,transparent 70%);top:42%;left:48%;opacity:.22}
+    .bg-topo svg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+
+    /* Variant 2: Blueprint — grid + crosshairs */
+    .bg-grid{
+      background-image:
+        linear-gradient(rgba(11,37,69,.07) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(11,37,69,.07) 1px,transparent 1px),
+        linear-gradient(rgba(11,37,69,.14) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(11,37,69,.14) 1px,transparent 1px);
+      background-size:32px 32px,32px 32px,160px 160px,160px 160px;
+      background-position:-1px -1px,-1px -1px,-1px -1px,-1px -1px;
+    }
+    .bg-grid .crosshair{position:absolute;width:14px;height:14px}
+    .bg-grid .crosshair::before,.bg-grid .crosshair::after{content:"";position:absolute;background:rgba(11,37,69,.45)}
+    .bg-grid .crosshair::before{left:50%;top:0;width:1px;height:100%;transform:translateX(-.5px)}
+    .bg-grid .crosshair::after{top:50%;left:0;height:1px;width:100%;transform:translateY(-.5px)}
+    .bg-grid .bloom{position:absolute;width:900px;height:900px;border-radius:50%;
+      background:radial-gradient(circle,rgba(11,37,69,.12) 0%,transparent 60%);
+      top:-300px;right:-200px;filter:blur(40px)}
+
+    /* Variant 3: Stripes — bold editorial diagonals */
+    .bg-stripes{
+      background-image:repeating-linear-gradient(
+        118deg,
+        transparent 0 64px,
+        rgba(11,37,69,.05) 64px 65px,
+        transparent 65px 128px,
+        rgba(11,37,69,.10) 128px 129px
+      );
+    }
+    .bg-stripes .accent-bar{position:absolute;width:140%;height:3px;background:linear-gradient(90deg,transparent,var(--navy) 30%,var(--navy) 70%,transparent);transform-origin:left center;left:-20%;opacity:.35}
+    .bg-stripes .b1{top:18%;transform:rotate(-28deg)}
+    .bg-stripes .b2{top:62%;transform:rotate(-28deg)}
+    .bg-stripes .b3{top:88%;transform:rotate(-28deg);opacity:.2}
+
+    /* Variant 4: Halftone — large dot field, navy ink-on-paper */
+    .bg-halftone{
+      background-image:radial-gradient(circle at 1px 1px,rgba(11,37,69,.22) 1.2px,transparent 1.6px);
+      background-size:22px 22px;
+    }
+    .bg-halftone .vignette{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 35%,transparent 0%,rgba(240,238,233,.6) 60%,var(--paper) 100%)}
+    .bg-halftone .accent{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#0B2545 0%,transparent 60%);filter:blur(60px);opacity:.5;top:-160px;left:-100px}
+
+    /* Variant 5: Mesh — soft animated gradient mesh */
+    @keyframes drift{0%{transform:translate(0,0)scale(1)}50%{transform:translate(40px,-30px)scale(1.08)}100%{transform:translate(0,0)scale(1)}}
+    .bg-mesh .orb{position:absolute;border-radius:50%;filter:blur(100px);mix-blend-mode:multiply}
+    .bg-mesh .o1{width:760px;height:760px;background:#0B2545;opacity:.42;top:-200px;left:-160px;animation:drift 18s ease-in-out infinite}
+    .bg-mesh .o2{width:600px;height:600px;background:#134074;opacity:.36;top:30%;right:-140px;animation:drift 22s ease-in-out infinite reverse}
+    .bg-mesh .o3{width:520px;height:520px;background:oklch(0.68 0.14 50);opacity:.18;bottom:-160px;left:30%;animation:drift 26s ease-in-out infinite}
+
+    /* Subtle paper texture under everything */
+    /* (paper background lives on <html> so the bg-layer is visible) */
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit}
+    .serif{font-family:"Newsreader",Georgia,serif;font-weight:500;font-style:italic}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="sections.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
