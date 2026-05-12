@@ -91,7 +91,7 @@ export default function About() {
                 maxWidth: '18ch',
               }}
             >
-              Operations as a craft. I treat it like one.
+              Operations stripped down. Performance scaled up.
             </h2>
 
             <div
@@ -124,12 +124,12 @@ export default function About() {
             >
               {(
                 [
-                  ['Practice', 'Independent · solo'],
-                  ['Working with', 'Teams of 10–80'],
-                  ['Day rate', 'NZ$1,800 / day'],
-                  ['Engagement min.', '5 days'],
+                  ['Practice', 'Consultancy · Freelance.'],
+                  ['Working with', 'Teams upwards of 50.'],
+                  ['Day rate', '£500 / day or Project Based (whichever suits you).'],
+                  ['Engagement min.', 'Just 1 day.'],
                   ['Languages', 'English'],
-                  ['Tools I keep on hand', 'Python · n8n · Airtable · Xero · Notion · GAS'],
+                  ['Tools I keep on hand', 'Model Context Protocol & LLMs (MCP & AI) · n8n · Make · Zapier · Airtable · Xero · Notion · GCP · AWS · Java SDK'],
                 ] as [string, string][]
               ).map(([k, v], i) => (
                 <div key={i}>
