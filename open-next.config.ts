@@ -1,7 +1,3 @@
-import type { CloudflareOpenNextConfig } from "@opennextjs/cloudflare";
+import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
-export default {
-  imageOptimization: {
-    loader: "passthrough",
-  },
-} satisfies CloudflareOpenNextConfig;
+export default defineCloudflareConfig();
