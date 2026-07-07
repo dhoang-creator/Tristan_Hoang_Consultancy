@@ -47,11 +47,10 @@ export default function Hero({ onJump }: HeroProps) {
             maxWidth: '18ch',
           }}
         >
-          I streamline your businesses{' '}
+          Your team is doing a work{' '}
           <span className="serif" style={{ color: 'var(--navy)' }}>
-            most repetitive work
+            a system should be doing.
           </span>{' '}
-          with the fewest moving parts.
         </h1>
 
         {/* Lede + CTAs */}
