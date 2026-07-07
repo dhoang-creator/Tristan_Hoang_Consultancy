@@ -138,7 +138,7 @@ function Hero({ onJump }) {
           <p style={{
             margin: 0, fontSize: 20, lineHeight: 1.45, color: 'var(--ink-mute)',
             maxWidth: '52ch', letterSpacing: '-0.005em'
-          }}>I'm Tristan Hoang, An Automation & Optimisation Consultant and Senior Software Engineer. I help ambitious Small and Medium Sized Businesses streamline their operations and scale without having to scale their overhead. I build the queit infrastructure and durable workflows/processes that lets teams focus on what really matters: Competitive Advantage, Not Admin.
+          }}>I'm Tristan Hoang, a Senior Software Engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team's plate. <strong>Eight years of distributed-systems engineering, delivered solo, accountable to you by name</strong>, not a junior in an agency, not a no-code template that breaks in month three. The result is simple: <strong>your people stop doing admin and start compounding your competitive advantage</strong>
 
 
 

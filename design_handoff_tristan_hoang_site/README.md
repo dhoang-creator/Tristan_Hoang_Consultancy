@@ -127,10 +127,10 @@ SVG path is in `design_files/assets/logo.svg` and also inlined as `<LogoMark>` i
   - Left paragraph (20px / 1.45 / `--ink-mute` / max-width 52ch): Tristan's positioning copy — see `sections.jsx` for current text. Treat as editable.
   - Right: two pill buttons — primary "How I work →" (`--navy` / `--paper`), secondary "See recent work" (`transparent` with `1px var(--rule-strong)` border).
 - **Stat strip** (marginTop 96px, paddingTop 32px, top rule, 4-column grid):
-  - 5 / years in operations
-  - 12 / engagements completed
-  - 1 / employees. Just me.
-  - 2 wks / typical lead time
+  - 8 yrs / senior engineering depth, not generalist tooling
+  - 12 / engagements delivered end-to-end
+  - 1 / point of accountability. The Person who scopes it is the person who builds it
+  - 2 wks / typical lead time, no agency queue
   - Big number: 48px / 600 / -0.02em / `--navy`. Label below: mono 11px / `--silver-2` / 0.10em uppercase, marginTop 10px.
 
 ### 3. About (`#about`)
