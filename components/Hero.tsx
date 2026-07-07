@@ -73,11 +73,7 @@ export default function Hero({ onJump }: HeroProps) {
               letterSpacing: '-0.005em',
             }}
           >
-            I&rsquo;m Tristan Hoang, an Automation &amp; Optimisation Consultant and Senior Software
-            Engineer. I help ambitious Small and Medium Sized Businesses streamline their operations
-            and scale without having to scale their overhead. I build the quiet infrastructure and
-            durable workflows that let teams focus on what really matters: Competitive Advantage, Not
-            Admin.
+              I’m Tristan Hoang — a senior software engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team’s plate. Eight years of distributed-systems engineering, delivered solo, accountable to you by name — not a junior in an agency, not a no-code template that breaks in month three. The result is simple: your people stop doing admin and start compounding your competitive advantage.
           </p>
 
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
