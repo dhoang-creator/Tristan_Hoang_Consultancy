@@ -243,7 +243,7 @@ function About() {
             marginTop: 56, padding: '28px 32px', borderRadius: 6,
             background: 'var(--paper-2)', border: '1px solid var(--rule)'
           }}>
-            <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 14, color: "rgb(73, 78, 87)" }}>MAY 2026 — UPDATED MONTHLY
+            <div className="mono" style={{ fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 14, color: "rgb(73, 78, 87)" }}>Q3 2026 — UPDATED QUARTERLY
 
             </div>
             <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>

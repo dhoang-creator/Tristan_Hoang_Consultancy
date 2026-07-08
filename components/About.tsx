@@ -183,7 +183,7 @@ export default function About() {
                   fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
                 }}
               >
-                MAY 2026 — UPDATED MONTHLY
+                Q3 2026 — UPDATED QUARTERLY
               </div>
               <ul
                 style={{

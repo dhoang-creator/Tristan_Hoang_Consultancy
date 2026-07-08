@@ -105,7 +105,7 @@ export default function Contact() {
             <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 18 }}>
               {(
                 [
-                  ['Email',    'tristanhoang1991@gmail.com'],
+                  ['Email',    'trist@tristanhoang.co.uk'],
                   ['Calendar', ' '],
                   ['LinkedIn', 'linkedin.com/in/dhoang-creator'],
                   ['Based in', 'Bristol, UK · GMT'],
