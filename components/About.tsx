@@ -104,17 +104,25 @@ export default function About() {
               }}
             >
               <p style={{ margin: '0 0 20px' }}>
-                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation. Hidding in manual processes, duplicated work and systems that don't talk to each other and I engineer it out for good.
+                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation. Hiding in manual processes, duplicated work and systems that don't talk to each other and I engineer it out for good.
               </p>
-              <p><strong>What that does to your margin, over three horizons:</strong></p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>Short run (weeks):</strong> the most painful repetitive task is automated, documented and handed over. Hours come back immediately.</li>
-                    <li><strong>Medium run (months):</strong> your tools start talking to each other. Swivel-chair work disappears, and the time you recover gets reinvested into revenue, not upkeep.</li>
-                    <li><strong>Long run (compounding):</strong> you've scaled output without scaling headcount or overhead. Every efficiency I build keeps paying out long after the invoice is settled.</li>
-                </ul>
-                <p style={{ margin: '0 0 20px' }}>
-                    <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong> and a senior engineer on the other end who's done this for ambitious European startups and scale-ups before doing it for you.
-                </p>
+              <p style={{ margin: '0 0 12px' }}>
+                <strong>What that does to your margin, over three horizons:</strong>
+              </p>
+              <ul style={{ margin: '0 0 20px', paddingLeft: 22, listStyle: 'disc' }}>
+                <li style={{ marginBottom: 8 }}>
+                  <strong>Short run (weeks):</strong> the most painful repetitive task is automated, documented and handed over. Hours come back immediately.
+                </li>
+                <li style={{ marginBottom: 8 }}>
+                  <strong>Medium run (months):</strong> your tools start talking to each other. Swivel-chair work disappears, and the time you recover gets reinvested into revenue, not upkeep.
+                </li>
+                <li>
+                  <strong>Long run (compounding):</strong> you've scaled output without scaling headcount or overhead. Every efficiency I build keeps paying out long after the invoice is settled.
+                </li>
+              </ul>
+              <p style={{ margin: 0 }}>
+                <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong> and a senior engineer on the other end who's done this for ambitious European startups and scale-ups before doing it for you.
+              </p>
             </div>
 
             {/* Practice details grid */}
