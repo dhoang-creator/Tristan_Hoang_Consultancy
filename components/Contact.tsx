@@ -68,7 +68,7 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: '120px 36px 80px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Get in touch — A08" />
+        <SectionEyebrow label="Get in touch — A09" />
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96 }}>
           {/* Left */}
@@ -80,11 +80,11 @@ export default function Contact() {
                 lineHeight: 1.02,
                 letterSpacing: '-0.025em',
                 fontWeight: 600,
-                maxWidth: '14ch',
+                maxWidth: '16ch',
               }}
             >
-              A short note is{' '}
-              <span className="serif">enough.</span>
+              Every week you wait,{' '}
+              <span className="serif">the leak keeps running.</span>
             </h2>
             <p
               style={{
@@ -95,9 +95,11 @@ export default function Contact() {
                 maxWidth: '42ch',
               }}
             >
-              Tell me a bit about the team, the workflow that&rsquo;s bothering you most, and any
-              constraint I should know about. I read everything personally and reply within two
-              working days.
+              The inefficiency costing you today doesn&rsquo;t pause while you think about it — it
+              compounds. The good news: the first conversation is short, free, and clarifying. Tell
+              me about the team, the workflow that&rsquo;s bothering you most, and any constraint I
+              should know about. <strong>I read every note personally and reply within two working
+              days</strong> — because the person you email is the person who&rsquo;ll do the work.
             </p>
 
             <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 18 }}>
@@ -161,7 +163,7 @@ export default function Contact() {
                     fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
                   }}
                 >
-                  Sent — A08.OK
+                  Sent — A09.OK
                 </div>
                 <h3
                   style={{

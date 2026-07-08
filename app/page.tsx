@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import WhyMe from '@/components/WhyMe'
 import Services from '@/components/Services'
 import Work from '@/components/Work'
 import Gallery from '@/components/Gallery'
@@ -45,6 +46,7 @@ export default function Page() {
       <Nav active={active} onJump={jump} />
       <Hero onJump={jump} />
       <About />
+      <WhyMe />
       <Services onJump={jump} />
       <Work />
       <Gallery />

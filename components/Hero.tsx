@@ -47,7 +47,7 @@ export default function Hero({ onJump }: HeroProps) {
             maxWidth: '18ch',
           }}
         >
-          Your team is doing a work{' '}
+          Your team is doing work{' '}
           <span className="serif" style={{ color: 'var(--navy)' }}>
             a system should be doing.
           </span>{' '}
@@ -73,12 +73,12 @@ export default function Hero({ onJump }: HeroProps) {
               letterSpacing: '-0.005em',
             }}
           >
-              I’m Tristan Hoang, a Senior Software Engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team’s plate. <strong>Eight years of distributed-systems engineering, delivered solo, accountable to you by name</strong>. Not a junior in an agency, not a no-code template that breaks in month three. The result is simple: <strong>your people stop doing admin and start compounding your competitive advantage.</strong>
+              I’m Tristan Hoang — a senior software engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team’s plate. <strong>Eight years of distributed-systems engineering, delivered solo, accountable to you by name</strong> — not a junior in an agency, not a no-code template that breaks in month three. The result is simple: <strong>your people stop doing admin and start compounding your competitive advantage.</strong>
           </p>
 
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <button
-              onClick={() => onJump('services')}
+              onClick={() => onJump('contact')}
               style={{
                 padding: '14px 22px',
                 border: 0,
@@ -90,7 +90,7 @@ export default function Hero({ onJump }: HeroProps) {
                 cursor: 'pointer',
               }}
             >
-              How I work →
+              Find the work that’s costing you →
             </button>
             <button
               onClick={() => onJump('work')}
@@ -105,7 +105,7 @@ export default function Hero({ onJump }: HeroProps) {
                 cursor: 'pointer',
               }}
             >
-              See recent work
+              See recent results
             </button>
           </div>
         </div>
@@ -123,9 +123,9 @@ export default function Hero({ onJump }: HeroProps) {
         >
           {(
             [
-              ['8', 'senior engineering depth, not generalist tooling'],
+              ['8 yrs', 'senior engineering depth, not generalist tooling'],
               ['12', 'engagements delivered end-to-end'],
-              ['1', 'point of accountability. The person who scopes it is the person who builds it'],
+              ['1', 'point of accountability — the person who scopes it is the person who builds it'],
               ['2 wks', 'typical lead time, no agency queue'],
             ] as [string, string][]
           ).map(([n, l], i) => (

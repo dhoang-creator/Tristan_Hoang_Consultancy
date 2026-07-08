@@ -1,6 +1,7 @@
 export interface Service {
   no: string
   name: string
+  hook: string
   summary: string
   deliverables: string[]
   duration: string
@@ -37,21 +38,23 @@ export const SERVICES: Service[] = [
   {
     no: '01',
     name: 'Process Automation & Workflow Audits',
+    hook: 'The fastest path to recovered hours.',
     summary:
-      'Replace repetitive manual work with reliable, auditable workflows — from finance ops to onboarding.',
+      'I find the repetitive manual work quietly draining your week and replace it with reliable, auditable workflows — finance ops, onboarding, reporting. You stop paying salaried people to do work a system should do.',
     deliverables: [
       'Process audit',
       'n8n / Make / Zapier builds',
       'Custom Python services',
       'Handover documentation',
     ],
-    duration: '2-5 days',
+    duration: '2–5 days',
   },
   {
     no: '02',
     name: 'Implementation Strategy',
+    hook: 'Stop paying for tools that don’t talk to each other.',
     summary:
-      'Re-shape the tool stack so data flows cleanly between CRM, finance, and operations — no more swivel-chair updates.',
+      'I reshape your stack so data flows cleanly between CRM, finance and operations — no more re-keying the same number into four systems. The hidden tax of swivel-chair admin disappears.',
     deliverables: [
       'Stack mapping',
       'Integration design',
@@ -63,8 +66,9 @@ export const SERVICES: Service[] = [
   {
     no: '03',
     name: 'AI Operations',
+    hook: 'Practical AI, scoped to pay for itself.',
     summary:
-      'Practical, scoped applications of LLMs for triage, drafting and classification — wired into the systems you already use.',
+      'Targeted use of LLMs for triage, drafting and classification — wired into the systems you already run, with an evaluation harness so it’s measured, not magical. Capacity you’d otherwise have to hire for, without the headcount.',
     deliverables: [
       'Use-case workshop',
       'Prototype',
@@ -76,8 +80,9 @@ export const SERVICES: Service[] = [
   {
     no: '04',
     name: 'Fractional AI Lead',
+    hook: 'A senior operator owning your next bottleneck.',
     summary:
-      'Ongoing leadership for teams of 10–80 — owning the operating cadence, the metrics, and the next bottleneck.',
+      'Ongoing leadership for teams of 10–80 — the cadence, the metrics, the roadmap. You get the strategic engineering hire your stage needs, at a fraction of the salaried cost.',
     deliverables: [
       'Weekly working sessions',
       'Roadmap ownership',
@@ -90,26 +95,26 @@ export const SERVICES: Service[] = [
 
 export const CASES: Case[] = [
   {
-    client: 'IKEA Dutch/European Service Office',
+    client: 'IKEA (Dutch/European Service Office)',
     sector: 'Retail & Logistics',
-    headline: 'Built a mobile app which took away days of manual labour.',
-    body: ' Identified an opportunity where several internal logistics tools did not communicate with one another, built a mobile application which aggregated and visualised the data at near real-time.',
+    headline: 'Days of repetitive work, gone — reinvested into work that moves the operation.',
+    body: 'Internal logistics tools weren’t talking to each other, so people filled the gap by hand. I built a mobile app that aggregated and visualised the data in near real-time.',
     metric: '−70%',
-    metricLabel: 'manual labour hours reduced',
+    metricLabel: 'manual labour hours',
   },
   {
     client: 'Swapfiets',
-    sector: 'Bike Leasing (on a European scale)',
-    headline: 'A single source of truth about what needs to be done now and bring in the money.',
-    body: ' ',
+    sector: 'Bike Leasing (European scale)',
+    headline: 'No single source of truth for what needed doing now. I built one.',
+    body: 'The team stopped reacting late and started getting ahead of demand.',
     metric: '2×',
-    metricLabel: 'faster spike response times',
+    metricLabel: 'faster spike-response times',
   },
   {
     client: 'Ace & Tate',
     sector: 'Opticians',
-    headline: ' ',
-    body: ' ',
+    headline: 'A referral process carrying small, invisible delays at every step.',
+    body: 'Trivial once — compounding across every referral, every day, for as long as the system runs.',
     metric: '11 min',
     metricLabel: 'saved per referral',
   },

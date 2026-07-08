@@ -25,7 +25,7 @@ export default function Work() {
   return (
     <section id="work" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Selected work — A05" />
+        <SectionEyebrow label="Selected work — A06" />
 
         <h2
           style={{

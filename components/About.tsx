@@ -91,7 +91,7 @@ export default function About() {
                 maxWidth: '18ch',
               }}
             >
-              The inefficiency is already costing you. I just make it visible, then I remove it.
+              The inefficiency is already costing you. I just make it visible — then I remove it.
             </h2>
 
             <div
@@ -104,7 +104,7 @@ export default function About() {
               }}
             >
               <p style={{ margin: '0 0 20px' }}>
-                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation. Hiding in manual processes, duplicated work and systems that don't talk to each other and I engineer it out for good.
+                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation — hidden in manual processes, duplicated work, and systems that don&rsquo;t talk to each other — and I engineer it out for good.
               </p>
               <p style={{ margin: '0 0 12px' }}>
                 <strong>What that does to your margin, over three horizons:</strong>
@@ -121,7 +121,7 @@ export default function About() {
                 </li>
               </ul>
               <p style={{ margin: 0 }}>
-                <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong> and a senior engineer on the other end who's done this for ambitious European startups and scale-ups before doing it for you.
+                <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong> — and a senior engineer on the other end who&rsquo;s done this for ambitious European startups and scale-ups before doing it for you.
               </p>
             </div>
 
@@ -140,7 +140,6 @@ export default function About() {
                 [
                   ['Practice', 'Consultancy · Freelance.'],
                   ['Working with', 'Teams upwards of 50.'],
-                  ['Day rate', '£500 / day or Project Based (whichever suits you).'],
                   ['Engagement min.', 'Just 1 day.'],
                   ['Languages', 'English'],
                   ['Tools I keep on hand', 'Model Context Protocol & LLMs (MCP & AI) · n8n · Make · Zapier · Airtable · Xero · Notion · GCP · AWS · Java SDK'],

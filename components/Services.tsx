@@ -34,7 +34,7 @@ export default function Services({ onJump }: ServicesProps) {
   return (
     <section id="services" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Services — A04" />
+        <SectionEyebrow label="Services — A05" />
 
         <div
           style={{
@@ -113,14 +113,11 @@ export default function Services({ onJump }: ServicesProps) {
                   >
                     {s.name}
                   </div>
-                  <div
-                    style={{
-                      fontSize: 15,
-                      color: 'var(--ink-mute)',
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    {s.summary}
+                  <div style={{ fontSize: 15, lineHeight: 1.5 }}>
+                    <em className="serif" style={{ display: 'block', color: 'var(--ink)', marginBottom: 6 }}>
+                      {s.hook}
+                    </em>
+                    <span style={{ color: 'var(--ink-mute)' }}>{s.summary}</span>
                   </div>
                   <div
                     style={{

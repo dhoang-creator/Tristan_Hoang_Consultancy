@@ -252,7 +252,7 @@ export default function Gallery() {
     <>
       <section id="gallery" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <SectionEyebrow label="Gallery — A06" />
+          <SectionEyebrow label="Gallery — A07" />
 
           <div
             style={{
