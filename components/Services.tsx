@@ -34,7 +34,7 @@ export default function Services({ onJump }: ServicesProps) {
   return (
     <section id="services" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Services — A05" />
+        <SectionEyebrow label="Services · A05" />
 
         <div
           style={{
@@ -68,7 +68,7 @@ export default function Services({ onJump }: ServicesProps) {
             }}
           >
             Most engagements blend two of these. I&rsquo;ll tell you in the first call which mix
-            actually fits your situation — and when none of them do.
+            actually fits your situation, and when none of them do.
           </p>
         </div>
 

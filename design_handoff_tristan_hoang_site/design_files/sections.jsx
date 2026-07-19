@@ -682,7 +682,7 @@ function Footer() {
             <div style={{ fontWeight: 600, fontSize: 15 }}>Tristan Hoang</div>
           </div>
           <p style={{ margin: 0, fontSize: 13.5, color: 'var(--ink-mute)', maxWidth: '40ch', lineHeight: 1.55 }}>
-            Independent automation and operations consulting. Trading as Hoang Consulting Limited, NZBN 9429051000000.
+            Independent automation and operations consulting. Trading as Tristan Hoang Automation Consultancy.
           </p>
         </div>
         {[

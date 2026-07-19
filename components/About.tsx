@@ -25,7 +25,7 @@ export default function About() {
   return (
     <section id="about" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="About — A03" />
+        <SectionEyebrow label="About · A03" />
 
         <div
           style={{
@@ -35,7 +35,7 @@ export default function About() {
             alignItems: 'start',
           }}
         >
-          {/* Left — portrait */}
+          {/* Left: portrait */}
           <div>
             <div
               style={{
@@ -47,6 +47,17 @@ export default function About() {
                 border: '1px solid var(--rule)',
               }}
             >
+              <img
+                src="/portrait.jpg"
+                alt="Portrait of Tristan Hoang"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
               <div
                 style={{
                   position: 'absolute',
@@ -62,7 +73,7 @@ export default function About() {
                   fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
                 }}
               >
-                Portrait — 4:5
+                Portrait · 4:5
               </div>
             </div>
             <div
@@ -79,7 +90,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right — bio */}
+          {/* Right: bio */}
           <div>
             <h2
               style={{
@@ -91,7 +102,7 @@ export default function About() {
                 maxWidth: '18ch',
               }}
             >
-              The inefficiency is already costing you. I just make it visible — then I remove it.
+              The inefficiency is already costing you. I just make it visible, then I remove it.
             </h2>
 
             <div
@@ -104,7 +115,7 @@ export default function About() {
               }}
             >
               <p style={{ margin: '0 0 20px' }}>
-                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation — hidden in manual processes, duplicated work, and systems that don&rsquo;t talk to each other — and I engineer it out for good.
+                Most consultants add a layer of cost. I do the opposite. I find the money already leaking out of your operation, hidden in manual processes, duplicated work, and systems that don&rsquo;t talk to each other. Then I engineer it out for good.
               </p>
               <p style={{ margin: '0 0 12px' }}>
                 <strong>What that does to your margin, over three horizons:</strong>
@@ -121,7 +132,7 @@ export default function About() {
                 </li>
               </ul>
               <p style={{ margin: 0 }}>
-                <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong> — and a senior engineer on the other end who&rsquo;s done this for ambitious European startups and scale-ups before doing it for you.
+                <strong>No lengthy engagements. No astronomical fees. Just concrete improvements to your bottom line that pay for themselves</strong>, and a senior engineer on the other end who&rsquo;s done this for ambitious European startups and scale-ups before doing it for you.
               </p>
             </div>
 
@@ -139,10 +150,10 @@ export default function About() {
               {(
                 [
                   ['Practice', 'Consultancy · Freelance.'],
-                  ['Working with', 'Teams upwards of 50.'],
+                  ['Working with', 'Teams of any size but ideally up to 200.'],
                   ['Engagement min.', 'Just 1 day.'],
                   ['Languages', 'English'],
-                  ['Tools I keep on hand', 'Model Context Protocol & LLMs (MCP & AI) · n8n · Make · Zapier · Airtable · Xero · Notion · GCP · AWS · Java SDK'],
+                  ['Tools I keep on hand', 'Model Context Protocol & LLMs (MCP & AI) · n8n · HubSpot/Pipedrive · Airtable · Xero/QuickBooks · Notion · GCP · AWS · Gmail/Outlook (Microsoft 365) · WhatsApp Business API/Twilio · Slack/Microsoft Teams · Salesforce · Shopify/WooCommerce · Trello/Monday.com/ClickUp · Java SDK'],
                 ] as [string, string][]
               ).map(([k, v], i) => (
                 <div key={i}>
@@ -183,7 +194,7 @@ export default function About() {
                   fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
                 }}
               >
-                Q3 2026 — UPDATED QUARTERLY
+                Q3 2026 · UPDATED QUARTERLY
               </div>
               <ul
                 style={{
@@ -200,7 +211,7 @@ export default function About() {
                     key={i}
                     style={{ display: 'flex', gap: 14, fontSize: 15, color: 'var(--ink-mute)' }}
                   >
-                    <span style={{ color: 'var(--silver-2)', flexShrink: 0 }}>—</span>
+                    <span style={{ color: 'var(--silver-2)', flexShrink: 0 }}>·</span>
                     <span>{item}</span>
                   </li>
                 ))}

@@ -73,7 +73,7 @@ export default function Hero({ onJump }: HeroProps) {
               letterSpacing: '-0.005em',
             }}
           >
-              I’m Tristan Hoang — a senior software engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team’s plate. <strong>Eight years of distributed-systems engineering, delivered solo, accountable to you by name</strong> — not a junior in an agency, not a no-code template that breaks in month three. The result is simple: <strong>your people stop doing admin and start compounding your competitive advantage.</strong>
+              I’m Tristan Hoang, a senior software engineer who builds the quiet infrastructure that takes repetitive, margin-eating work off your team’s plate. <strong>Eight years of distributed-systems engineering, delivered solo, accountable to you by name.</strong> Not a junior in an agency, not a no-code template that breaks in month three. The result is simple: <strong>your people stop doing admin and start compounding your competitive advantage.</strong>
           </p>
 
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -125,7 +125,7 @@ export default function Hero({ onJump }: HeroProps) {
             [
               ['8 yrs', 'senior engineering depth, not generalist tooling'],
               ['12', 'engagements delivered end-to-end'],
-              ['1', 'point of accountability — the person who scopes it is the person who builds it'],
+              ['1', 'point of accountability: the person who scopes it is the person who builds it'],
               ['2 wks', 'typical lead time, no agency queue'],
             ] as [string, string][]
           ).map(([n, l], i) => (

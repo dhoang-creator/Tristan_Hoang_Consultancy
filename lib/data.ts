@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
     name: 'Process Automation & Workflow Audits',
     hook: 'The fastest path to recovered hours.',
     summary:
-      'I find the repetitive manual work quietly draining your week and replace it with reliable, auditable workflows — finance ops, onboarding, reporting. You stop paying salaried people to do work a system should do.',
+      'I find the repetitive manual work quietly draining your week and replace it with reliable, auditable workflows: finance ops, onboarding, reporting. You stop paying salaried people to do work a system should do.',
     deliverables: [
       'Process audit',
       'n8n / Make / Zapier builds',
@@ -54,7 +54,7 @@ export const SERVICES: Service[] = [
     name: 'Implementation Strategy',
     hook: 'Stop paying for tools that don’t talk to each other.',
     summary:
-      'I reshape your stack so data flows cleanly between CRM, finance and operations — no more re-keying the same number into four systems. The hidden tax of swivel-chair admin disappears.',
+      'I reshape your stack so data flows cleanly between CRM, finance and operations. No more re-keying the same number into four systems. The hidden tax of swivel-chair admin disappears.',
     deliverables: [
       'Stack mapping',
       'Integration design',
@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
     name: 'AI Operations',
     hook: 'Practical AI, scoped to pay for itself.',
     summary:
-      'Targeted use of LLMs for triage, drafting and classification — wired into the systems you already run, with an evaluation harness so it’s measured, not magical. Capacity you’d otherwise have to hire for, without the headcount.',
+      'Targeted use of LLMs for triage, drafting and classification, wired into the systems you already run, with an evaluation harness so it’s measured, not magical. Capacity you’d otherwise have to hire for, without the headcount.',
     deliverables: [
       'Use-case workshop',
       'Prototype',
@@ -82,7 +82,7 @@ export const SERVICES: Service[] = [
     name: 'Fractional AI Lead',
     hook: 'A senior operator owning your next bottleneck.',
     summary:
-      'Ongoing leadership for teams of 10–80 — the cadence, the metrics, the roadmap. You get the strategic engineering hire your stage needs, at a fraction of the salaried cost.',
+      'Ongoing leadership for teams of 10–80: the cadence, the metrics, the roadmap. You get the strategic engineering hire your stage needs, at a fraction of the salaried cost.',
     deliverables: [
       'Weekly working sessions',
       'Roadmap ownership',
@@ -97,7 +97,7 @@ export const CASES: Case[] = [
   {
     client: 'IKEA (Dutch/European Service Office)',
     sector: 'Retail & Logistics',
-    headline: 'Days of repetitive work, gone — reinvested into work that moves the operation.',
+    headline: 'Days of repetitive work, gone, reinvested into work that moves the operation.',
     body: 'Internal logistics tools weren’t talking to each other, so people filled the gap by hand. I built a mobile app that aggregated and visualised the data in near real-time.',
     metric: '−70%',
     metricLabel: 'manual labour hours',
@@ -114,7 +114,7 @@ export const CASES: Case[] = [
     client: 'Ace & Tate',
     sector: 'Opticians',
     headline: 'A referral process carrying small, invisible delays at every step.',
-    body: 'Trivial once — compounding across every referral, every day, for as long as the system runs.',
+    body: 'Trivial once, compounding across every referral, every day, for as long as the system runs.',
     metric: '11 min',
     metricLabel: 'saved per referral',
   },
@@ -130,9 +130,9 @@ export const POSTS: Post[] = [
     excerpt:
       'The flashy demos rarely survive contact with a real ops team. The ones that stick share three boring traits.',
     body: [
-      'There is a pattern I keep running into when I audit ops teams. The automations that get the most internal applause — the Slack bots, the demo dashboards, the "AI agent" prototypes — are almost never the ones doing real load-bearing work six months later.',
+      'There is a pattern I keep running into when I audit ops teams. The automations that get the most internal applause (the Slack bots, the demo dashboards, the "AI agent" prototypes) are almost never the ones doing real load-bearing work six months later.',
       'The work that survives is almost always invisible. A nightly script that reconciles two ledgers. A webhook that updates a single field on a single record. A small Python service that sits between a CRM and a billing platform and does nothing more interesting than rename three columns.',
-      'Three traits these quiet automations share: they have exactly one owner; they fail loudly when they fail; and the team can describe what they do in a single sentence. When any of those three fall away, the automation becomes a liability — usually within a quarter.',
+      'Three traits these quiet automations share: they have exactly one owner; they fail loudly when they fail; and the team can describe what they do in a single sentence. When any of those three fall away, the automation becomes a liability, usually within a quarter.',
       'My current rule of thumb: if an automation needs a runbook longer than a Post-it note, it is probably trying to do too much.',
     ],
   },
@@ -146,7 +146,7 @@ export const POSTS: Post[] = [
       'Most teams of 20 are paying for 40+ SaaS tools. Here is how I get that number back under control without a six-month migration.',
     body: [
       'Almost every mid-size team I work with has the same hidden problem: their stack grew faster than their headcount, and nobody has done a tidy-up in two years.',
-      'I run a 90-minute exercise I call "the rule of seven". Pull a list of every paid tool from finance. For each one, write down — in fewer than seven words — what would break if you cancelled it tomorrow. If you cannot, that is the answer.',
+      'I run a 90-minute exercise I call "the rule of seven". Pull a list of every paid tool from finance. For each one, write down, in fewer than seven words, what would break if you cancelled it tomorrow. If you cannot, that is the answer.',
       'The first pass usually identifies four or five tools that nobody can defend. The second pass, a week later, identifies another three or four whose function has been quietly absorbed by something else.',
     ],
   },
@@ -160,7 +160,7 @@ export const POSTS: Post[] = [
       'A small mental model shift fixes most of the failure modes I see when teams try to put language models into production.',
     body: [
       'The mental model that gets teams in trouble is "the model is the product". Once you switch to "the model is a junior analyst on the team", most design decisions get easier.',
-      'You would not give a junior analyst write-access to your billing system on day one. You would not let them email a customer without a senior review. You would absolutely give them well-scoped, repetitive work with clear acceptance criteria — exactly the kind of work an LLM is good at.',
+      'You would not give a junior analyst write-access to your billing system on day one. You would not let them email a customer without a senior review. You would absolutely give them well-scoped, repetitive work with clear acceptance criteria: exactly the kind of work an LLM is good at.',
       'Build the rails first. Worry about the model second.',
     ],
   },
@@ -173,7 +173,7 @@ export const POSTS: Post[] = [
     excerpt:
       'It is still the right starting point. It is rarely the right finishing point, and I have learned to be honest about that earlier.',
     body: [
-      'Zapier is the right tool for the first three months of any automation problem. Past that, the things that made it fast at the start — the opaque connectors, the per-task pricing, the implicit ordering — become the things that slow you down.',
+      'Zapier is the right tool for the first three months of any automation problem. Past that, the things that made it fast at the start (the opaque connectors, the per-task pricing, the implicit ordering) become the things that slow you down.',
       'My current default: prototype in Zapier or Make, then port anything that runs more than 5,000 times a month onto a small Python service with a proper queue. Boring, observable, owned by one person.',
     ],
   },
@@ -199,16 +199,16 @@ export const POSTS: Post[] = [
     excerpt: 'The request is almost never actually for a dashboard. Find the decision underneath it.',
     body: [
       'When a client asks for "a dashboard", I have learned to ask one question before I write a line of SQL: what decision will this dashboard change?',
-      'About half the time, the honest answer is "none — I just want to feel like I am on top of it". That is a real need, but a dashboard is the wrong shape for it. A weekly written summary, or a single number in a Slack channel, is almost always better.',
+      'About half the time, the honest answer is "none, I just want to feel like I am on top of it". That is a real need, but a dashboard is the wrong shape for it. A weekly written summary, or a single number in a Slack channel, is almost always better.',
     ],
   },
 ]
 
 export const GALLERY: GalleryItem[] = [
-  { id: 'g1', title: 'Month-end close — Marlow & Finch', tag: 'Workflow map',   tone: 'navy',  aspect: 'tall'   },
+  { id: 'g1', title: 'Month-end close · Marlow & Finch', tag: 'Workflow map',   tone: 'navy',  aspect: 'tall'   },
   { id: 'g2', title: 'Customs broker integration',        tag: 'System diagram', tone: 'paper', aspect: 'wide'   },
   { id: 'g3', title: 'Referral triage flow',              tag: 'LLM pipeline',   tone: 'blue',  aspect: 'square' },
-  { id: 'g4', title: 'Operating cadence — weekly',        tag: 'Cadence',        tone: 'paper', aspect: 'square' },
+  { id: 'g4', title: 'Operating cadence · weekly',        tag: 'Cadence',        tone: 'paper', aspect: 'square' },
   { id: 'g5', title: 'CRM ↔ Billing reconciliation',      tag: 'Architecture',   tone: 'navy',  aspect: 'wide'   },
   { id: 'g6', title: 'Vendor consolidation, before/after', tag: 'Stack audit',   tone: 'paper', aspect: 'tall'   },
   { id: 'g7', title: 'Onboarding automation',             tag: 'Workflow map',   tone: 'blue',  aspect: 'square' },
@@ -216,8 +216,7 @@ export const GALLERY: GalleryItem[] = [
 ]
 
 export const NOW: string[] = [
-  'Working with several brick and mortar businesses in the South West of England Region.',
   'Adding value to the products/services I have on offer.',
   'Building out a small evaluation harness for LLM operations workflows in spare hours.',
-  'Open to new In Person or Remote Workflow Audits from June 2026.',
+  'Open to new In Person or Remote Workflow Audits from Q2 2026.',
 ]

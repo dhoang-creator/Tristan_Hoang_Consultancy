@@ -149,10 +149,9 @@ const GALLERY = [
 ];
 
 const NOW = [
-  'Working with several brick and mortar businesses in the South West of England Region.',
   'Adding value to the products/services I have on offer.',
   'Building out a small evaluation harness for LLM operations workflows in spare hours.',
-  'Open to new In Person or Remote Workflow Audits from June 2026.',
+  'Open to new In Person or Remote Workflow Audits from Q2 2026.',
 ];
 
 Object.assign(window, { SERVICES, CASES, POSTS, GALLERY, NOW });

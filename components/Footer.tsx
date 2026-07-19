@@ -28,7 +28,7 @@ export default function Footer() {
               lineHeight: 1.55,
             }}
           >
-            Independent automation and operations consulting. Trading as Tristan Hoang | Workflow and Optimisations Consultant.
+            Independent automation and operations consulting. Trading as Tristan Hoang Automation Consultancy.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function Footer() {
             fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
           }}
         >
-          © 2026 Hoang Consulting Limited
+          © 2026 Tristan Hoang Automation Consultancy Sole Prop
         </div>
         <div
           style={{

@@ -252,7 +252,7 @@ export default function Gallery() {
     <>
       <section id="gallery" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <SectionEyebrow label="Gallery — A07" />
+          <SectionEyebrow label="Gallery · A07" />
 
           <div
             style={{
@@ -285,7 +285,7 @@ export default function Gallery() {
                 color: 'var(--ink-mute)',
               }}
             >
-              A sample of the artefacts I leave behind — workflow maps, system architectures,
+              A sample of the artefacts I leave behind: workflow maps, system architectures,
               cadence templates. All anonymised; originals stay with the client.
             </p>
           </div>

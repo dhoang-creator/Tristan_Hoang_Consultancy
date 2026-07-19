@@ -42,7 +42,7 @@ export default function WhyMe() {
   return (
     <section id="why-me" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Why me — A04" />
+        <SectionEyebrow label="Why me · A04" />
 
         <h2
           style={{

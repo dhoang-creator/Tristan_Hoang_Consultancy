@@ -68,7 +68,7 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: '120px 36px 80px', scrollMarginTop: 90 }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <SectionEyebrow label="Get in touch — A09" />
+        <SectionEyebrow label="Get in touch · A09" />
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96 }}>
           {/* Left */}
@@ -95,11 +95,11 @@ export default function Contact() {
                 maxWidth: '42ch',
               }}
             >
-              The inefficiency costing you today doesn&rsquo;t pause while you think about it — it
+              The inefficiency costing you today doesn&rsquo;t pause while you think about it; it
               compounds. The good news: the first conversation is short, free, and clarifying. Tell
               me about the team, the workflow that&rsquo;s bothering you most, and any constraint I
               should know about. <strong>I read every note personally and reply within two working
-              days</strong> — because the person you email is the person who&rsquo;ll do the work.
+              days</strong>, because the person you email is the person who&rsquo;ll do the work.
             </p>
 
             <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 18 }}>
@@ -138,7 +138,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right: form */}
           <div>
             {sent ? (
               <div
@@ -163,7 +163,7 @@ export default function Contact() {
                     fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
                   }}
                 >
-                  Sent — A09.OK
+                  Sent · A09.OK
                 </div>
                 <h3
                   style={{
@@ -224,7 +224,7 @@ export default function Contact() {
                     Your name
                     {errors.name && (
                       <span style={{ color: 'var(--accent)', marginLeft: 8, letterSpacing: 0, textTransform: 'none' }}>
-                        — {errors.name}
+                        {errors.name}
                       </span>
                     )}
                   </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                     Email
                     {errors.email && (
                       <span style={{ color: 'var(--accent)', marginLeft: 8, letterSpacing: 0, textTransform: 'none' }}>
-                        — {errors.email}
+                        {errors.email}
                       </span>
                     )}
                   </div>
@@ -282,7 +282,7 @@ export default function Contact() {
                     What would you like to talk about?
                     {errors.message && (
                       <span style={{ color: 'var(--accent)', marginLeft: 8, letterSpacing: 0, textTransform: 'none' }}>
-                        — {errors.message}
+                        {errors.message}
                       </span>
                     )}
                   </div>

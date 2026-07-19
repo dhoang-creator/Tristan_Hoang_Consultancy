@@ -184,7 +184,7 @@ export default function Journal() {
     <>
       <section id="journal" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <SectionEyebrow label="Journal — A08" />
+          <SectionEyebrow label="Journal · A08" />
 
           <div
             style={{

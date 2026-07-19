@@ -242,7 +242,7 @@ Eyebrow `Get in touch — A08`. 2-column grid (`1fr 1fr`, gap 96):
 
 `borderTop 1px var(--rule)`, padding `48 36 56`. 4-column grid (`2fr 1fr 1fr 1fr`, gap 48). First column = mini-wordmark + 13.5px description with NZBN line (placeholder — replace for a UK trading entity). Other three columns are "Site" / "Elsewhere" / "Office" lists (mono eyebrow + 13.5px `--ink-mute` items).
 
-Bottom strip: top rule, paddingTop 24, marginTop 56, flex row between mono `© 2026 Hoang Consulting Limited` and version tag `v1.0 · TH-2026`.
+Bottom strip: top rule, paddingTop 24, marginTop 56, flex row between mono `© 2026 Tristan Hoang Automation Consultancy Sole Prop` and version tag `v1.0 · TH-2026`.
 
 ---
 
