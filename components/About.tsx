@@ -47,6 +47,17 @@ export default function About() {
                 border: '1px solid var(--rule)',
               }}
             >
+              <img
+                src="/portrait.jpg"
+                alt="Portrait of Tristan Hoang"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
               <div
                 style={{
                   position: 'absolute',

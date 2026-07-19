@@ -35,10 +35,22 @@ export default function Footer() {
         {/* Link columns */}
         {(
           [
-            ['Site',       ['About', 'Services', 'Work', 'Gallery', 'Journal', 'Contact']],
-            ['Elsewhere',  ['LinkedIn', 'Read.cv', 'GitHub', 'RSS']],
-            ['Office',     ['Bristol, UK']],
-          ] as [string, string[]][]
+            ['Site', [
+              ['About',    '#about'],
+              ['Services', '#services'],
+              ['Work',     '#work'],
+              ['Gallery',  '#gallery'],
+              ['Journal',  '#journal'],
+              ['Contact',  '#contact'],
+            ]],
+            ['Elsewhere', [
+              ['LinkedIn', 'https://www.linkedin.com/in/dhoang-creator'],
+              ['GitHub',   'https://github.com/dhoang-creator'],
+            ]],
+            ['GDPR', [
+              ['Privacy Policy', '/privacy'],
+            ]],
+          ] as [string, [string, string | null][]][]
         ).map(([heading, items]) => (
           <div key={heading}>
             <div
@@ -63,9 +75,21 @@ export default function Footer() {
                 gap: 9,
               }}
             >
-              {items.map((x) => (
-                <li key={x} style={{ fontSize: 13.5, color: 'var(--ink-mute)' }}>
-                  {x}
+              {items.map(([label, href]) => (
+                <li key={label} style={{ fontSize: 13.5, color: 'var(--ink-mute)' }}>
+                  {href ? (
+                    <a
+                      className="footer-link"
+                      href={href}
+                      {...(href.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    label
+                  )}
                 </li>
               ))}
             </ul>
