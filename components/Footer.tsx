@@ -39,8 +39,8 @@ export default function Footer() {
               ['About',    '#about'],
               ['Services', '#services'],
               ['Work',     '#work'],
-              ['Gallery',  '#gallery'],
-              ['Journal',  '#journal'],
+              ['Gallery',  '/gallery'],
+              ['Journal',  '/journal'],
               ['Contact',  '#contact'],
             ]],
             ['Elsewhere', [

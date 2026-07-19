@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
+import Link from 'next/link'
 import { GALLERY, type GalleryItem } from '@/lib/data'
 
 function SectionEyebrow({ label }: { label: string }) {
@@ -36,36 +37,37 @@ function lightboxBg(tone: GalleryItem['tone']) {
   return 'repeating-linear-gradient(135deg, var(--paper-2) 0 24px, var(--silver) 24px 48px)'
 }
 
-function GalleryTile({ item, onOpen }: { item: GalleryItem; onOpen: (item: GalleryItem) => void }) {
+const tileFrame: React.CSSProperties = {
+  appearance: 'none',
+  border: '1px solid var(--rule)',
+  borderRadius: 6,
+  padding: 0,
+  overflow: 'hidden',
+  textAlign: 'left',
+  background: 'var(--paper-2)',
+  width: '100%',
+  display: 'block',
+  transition: 'transform 250ms ease, box-shadow 250ms ease',
+}
+
+function lift(e: React.MouseEvent<HTMLElement>) {
+  const el = e.currentTarget as HTMLElement
+  el.style.transform = 'translateY(-3px)'
+  el.style.boxShadow = '0 12px 32px rgba(11,37,69,.12)'
+}
+
+function drop(e: React.MouseEvent<HTMLElement>) {
+  const el = e.currentTarget as HTMLElement
+  el.style.transform = 'translateY(0)'
+  el.style.boxShadow = 'none'
+}
+
+function TileInner({ item }: { item: GalleryItem }) {
   const aspect = item.aspect === 'tall' ? '3 / 4' : item.aspect === 'wide' ? '16 / 10' : '1 / 1'
   const isDark = item.tone !== 'paper'
 
   return (
-    <button
-      onClick={() => onOpen(item)}
-      style={{
-        appearance: 'none',
-        border: '1px solid var(--rule)',
-        borderRadius: 6,
-        padding: 0,
-        overflow: 'hidden',
-        cursor: 'zoom-in',
-        textAlign: 'left',
-        background: 'var(--paper-2)',
-        width: '100%',
-        transition: 'transform 250ms ease, box-shadow 250ms ease',
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget as HTMLButtonElement
-        el.style.transform = 'translateY(-3px)'
-        el.style.boxShadow = '0 12px 32px rgba(11,37,69,.12)'
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget as HTMLButtonElement
-        el.style.transform = 'translateY(0)'
-        el.style.boxShadow = 'none'
-      }}
-    >
+    <>
       <div style={{ aspectRatio: aspect, background: tileBg(item.tone), position: 'relative' }}>
         <div
           style={{
@@ -108,11 +110,46 @@ function GalleryTile({ item, onOpen }: { item: GalleryItem; onOpen: (item: Galle
           {item.id.toUpperCase()}
         </div>
       </div>
+    </>
+  )
+}
+
+export function GalleryTile({
+  item,
+  href,
+  onOpen,
+}: {
+  item: GalleryItem
+  href?: string
+  onOpen?: (item: GalleryItem) => void
+}) {
+  if (href) {
+    return (
+      <Link
+        href={href}
+        style={tileFrame}
+        onMouseEnter={lift}
+        onMouseLeave={drop}
+        aria-label={`${item.title} — view in gallery`}
+      >
+        <TileInner item={item} />
+      </Link>
+    )
+  }
+
+  return (
+    <button
+      onClick={() => onOpen?.(item)}
+      style={{ ...tileFrame, cursor: 'zoom-in' }}
+      onMouseEnter={lift}
+      onMouseLeave={drop}
+    >
+      <TileInner item={item} />
     </button>
   )
 }
 
-function GalleryLightbox({
+export function GalleryLightbox({
   item,
   onClose,
 }: {
@@ -246,68 +283,84 @@ function GalleryLightbox({
 }
 
 export default function Gallery() {
-  const [galleryItem, setGalleryItem] = useState<GalleryItem | null>(null)
+  const preview = GALLERY.slice(0, 3)
 
   return (
-    <>
-      <section id="gallery" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <SectionEyebrow label="Gallery · A07" />
+    <section id="gallery" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <SectionEyebrow label="Gallery · A07" />
 
-          <div
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'end',
+            justifyContent: 'space-between',
+            gap: 48,
+            marginBottom: 56,
+          }}
+        >
+          <h2
             style={{
-              display: 'flex',
-              alignItems: 'end',
-              justifyContent: 'space-between',
-              gap: 48,
-              marginBottom: 56,
+              margin: 0,
+              fontSize: 'clamp(36px, 4.5vw, 64px)',
+              lineHeight: 1.02,
+              letterSpacing: '-0.025em',
+              fontWeight: 600,
+              maxWidth: '16ch',
             }}
           >
-            <h2
-              style={{
-                margin: 0,
-                fontSize: 'clamp(36px, 4.5vw, 64px)',
-                lineHeight: 1.02,
-                letterSpacing: '-0.025em',
-                fontWeight: 600,
-                maxWidth: '16ch',
-              }}
-            >
-              Working diagrams,{' '}
-              <span className="serif">not pitch decks.</span>
-            </h2>
-            <p
-              style={{
-                margin: 0,
-                maxWidth: '34ch',
-                fontSize: 15,
-                lineHeight: 1.55,
-                color: 'var(--ink-mute)',
-              }}
-            >
-              A sample of the artefacts I leave behind: workflow maps, system architectures,
-              cadence templates. All anonymised; originals stay with the client.
-            </p>
-          </div>
-
-          <div
+            Working diagrams,{' '}
+            <span className="serif">not pitch decks.</span>
+          </h2>
+          <p
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: 20,
-              gridAutoFlow: 'dense',
+              margin: 0,
+              maxWidth: '34ch',
+              fontSize: 15,
+              lineHeight: 1.55,
+              color: 'var(--ink-mute)',
             }}
           >
-            {GALLERY.map((g) => (
-              <div key={g.id} style={g.aspect === 'wide' ? { gridColumn: 'span 2' } : {}}>
-                <GalleryTile item={g} onOpen={setGalleryItem} />
-              </div>
-            ))}
-          </div>
+            A sample of the artefacts I leave behind: workflow maps, system architectures,
+            cadence templates. All anonymised; originals stay with the client.
+          </p>
         </div>
-      </section>
 
-      <GalleryLightbox item={galleryItem} onClose={() => setGalleryItem(null)} />
-    </>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: 20,
+            gridAutoFlow: 'dense',
+          }}
+        >
+          {preview.map((g) => (
+            <div key={g.id} style={g.aspect === 'wide' ? { gridColumn: 'span 2' } : {}}>
+              <GalleryTile item={g} href="/gallery" />
+            </div>
+          ))}
+        </div>
+
+        <div style={{ marginTop: 40 }}>
+          <Link
+            href="/gallery"
+            className="footer-link"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              padding: '11px 20px',
+              border: '1px solid var(--rule-strong)',
+              borderRadius: 999,
+              fontSize: 13.5,
+              fontWeight: 500,
+              color: 'var(--ink-mute)',
+            }}
+          >
+            View the full gallery →
+          </Link>
+        </div>
+      </div>
+    </section>
   )
 }

@@ -19,6 +19,7 @@ const newsreader = Newsreader({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.tristanhoang.co.uk'),
   title: 'Tristan Hoang | Automation & Optimisation Consultant',
   description:
     'Independent automation and operations consulting. I help ambitious SMBs streamline their operations and scale without scaling their overhead.',
