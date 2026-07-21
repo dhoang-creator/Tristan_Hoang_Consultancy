@@ -105,11 +105,72 @@ export default async function PostPage({
         </h1>
 
         <div style={{ fontSize: 17, lineHeight: 1.65, color: 'var(--ink-mute)' }}>
-          {post.body.map((para, i) => (
-            <p key={i} style={{ margin: '0 0 22px' }}>
-              {para}
-            </p>
-          ))}
+          {post.body.map((block, i) => {
+            if (typeof block === 'string') {
+              return (
+                <p key={i} style={{ margin: '0 0 22px' }}>
+                  {block}
+                </p>
+              )
+            }
+
+            if (block.type === 'h2') {
+              return (
+                <h2
+                  key={i}
+                  style={{
+                    margin: '40px 0 16px',
+                    fontSize: 24,
+                    lineHeight: 1.25,
+                    fontWeight: 600,
+                    letterSpacing: '-0.015em',
+                    color: 'var(--ink)',
+                  }}
+                >
+                  {block.text}
+                </h2>
+              )
+            }
+
+            if (block.type === 'h3') {
+              return (
+                <h3
+                  key={i}
+                  style={{
+                    margin: '32px 0 12px',
+                    fontSize: 19,
+                    lineHeight: 1.3,
+                    fontWeight: 600,
+                    color: 'var(--ink)',
+                  }}
+                >
+                  {block.text}
+                </h3>
+              )
+            }
+
+            if (block.type === 'ul') {
+              return (
+                <ul key={i} style={{ margin: '0 0 22px', paddingLeft: 22 }}>
+                  {block.items.map((item, j) => (
+                    <li key={j} style={{ marginBottom: 8 }}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+
+            return (
+              <ol key={i} style={{ margin: '0 0 22px', paddingLeft: 22 }}>
+                {block.items.map((item, j) => (
+                  <li key={j} style={{ marginBottom: 8 }}>
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            )
+          })}
         </div>
 
         <div

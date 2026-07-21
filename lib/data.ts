@@ -16,6 +16,13 @@ export interface Case {
   metricLabel: string
 }
 
+export type BodyBlock =
+  | string
+  | { type: 'h2'; text: string }
+  | { type: 'h3'; text: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'ol'; items: string[] }
+
 export interface Post {
   slug: string
   title: string
@@ -23,7 +30,7 @@ export interface Post {
   readTime: string
   tag: string
   excerpt: string
-  body: string[]
+  body: BodyBlock[]
 }
 
 export interface GalleryItem {
@@ -121,6 +128,67 @@ export const CASES: Case[] = [
 ]
 
 export const POSTS: Post[] = [
+  {
+    slug: 'three-minute-task-hidden-cost',
+    title: 'How Much Time Can Automation Save a 20-Person Team? (Worked Example)',
+    date: '2026-07-21',
+    readTime: '10 mins',
+    tag: 'Cost-Savings',
+    excerpt:
+      'A three-minute task repeated twelve times a day costs a UK SMB roughly £3,000 a year per person. Here is the arithmetic, and how to find yours.',
+    body: [
+      { type: 'h2', text: 'How much does a three-minute task actually cost per year?' },
+      'About £3,000 a year, per person, for a single task repeated twelve times a day. That is not a rounding error — it is a meaningful fraction of a junior salary, and it does not appear anywhere in your accounts.',
+      'Here is the arithmetic in full, because the number only lands when you can check it:',
+      {
+        type: 'ul',
+        items: [
+          '3 minutes per instance, 12 instances a day = 36 minutes daily',
+          '36 minutes × 5 days = 3 hours a week',
+          '3 hours × 46 working weeks (after holiday and bank holidays) = 138 hours a year',
+          '138 hours is roughly 3.5 working weeks — from one person, on one task',
+          'At a £32,000 salary plus ~20% employer NI and overhead, the loaded cost is about £22 an hour',
+          '138 × £22 = £3,036 a year',
+        ],
+      },
+      'Now scale it. If three people in a 20-person business each carry that same task, you are spending roughly £9,100 a year and losing 414 hours — about a quarter of a full-time role — on work no one chose to do.',
+      { type: 'h2', text: "Why doesn't this cost show up in your P&L?" },
+      'Because it is already inside a salary you have decided to pay. Accounting recognises the wage; it does not recognise what the wage was spent doing.',
+      'This is the structural reason small repetitive work survives so long. A £9,000 software subscription gets a procurement conversation, a renewal review and a line item someone defends every year. A £9,100 pattern of re-typing addresses between two systems gets nothing, because no invoice ever arrives for it. It is paid in headcount, and headcount is a fixed cost you have stopped questioning.',
+      'The consequence is predictable. Volume grows, the three-minute tasks multiply, and the business hires — not because the work became more valuable, but because the friction consumed the capacity you already had. That is the hire you did not plan.',
+      { type: 'h2', text: 'Which small tasks are worth automating first?' },
+      'Rank them by annual minutes, not by how irritating they are. The tasks people complain about loudest are rarely the most expensive ones.',
+      'Run this over one week — it takes about twenty minutes of attention, spread out:',
+      {
+        type: 'ol',
+        items: [
+          'Monday, 5 minutes. Open a spreadsheet with four columns: Task, Minutes per instance, Instances per day, People who do it.',
+          'Tuesday to Thursday, 2 minutes a day. Each person adds any task they did more than twice that day which involved moving information between two places. That last clause matters — it filters out judgement work and leaves the mechanical work.',
+          'Friday, 10 minutes. Multiply: minutes × instances × people × 230 working days ÷ 60 = annual hours. Sort descending.',
+        ],
+      },
+      'Look only at the top three. Everything below them is noise until the top three are gone.',
+      'The pattern that almost always tops the list is re-entry: the same fact typed into a second system because the first system cannot talk to it. Tenancy details from an enquiry form into the property manager. Candidate details from a job board into the ATS and then into payroll. A new client from the CRM into the accounting tool. Nobody designed this work. It accumulated.',
+      { type: 'h2', text: 'What does it cost to fix?' },
+      'For a single well-defined re-entry task, usually far less than the annual cost it removes — which is the only ratio worth arguing about.',
+      'Two honest caveats, because the ratio is not always favourable:',
+      {
+        type: 'ul',
+        items: [
+          'Automation does not recover 100% of the time. Exceptions still need a human. A realistic target is 70–85% of the mechanical portion, and you should plan around the remainder rather than pretend it does not exist.',
+          'If the underlying process is wrong, automating it makes the wrong thing faster. Sometimes the correct answer is to remove a step entirely, or fix the upstream form that is producing bad data — no automation required. I have recommended exactly that more than once, and it is a cheaper outcome for the business.',
+        ],
+      },
+      "The test I apply before building anything: does this permanently remove the task, or does it just make a person's version of the task quicker? Only the first one compounds.",
+      { type: 'h2', text: 'Frequently asked questions' },
+      { type: 'h3', text: 'How much time can automation realistically save a 20-person team?' },
+      'In UK SMBs with typical tooling, mechanical data-transfer work commonly runs at 2–5 hours per person per week. Removing 70–85% of that across a 20-person team recovers the equivalent of one to two full-time roles a year. The variance depends almost entirely on how many systems your data crosses.',
+      { type: 'h3', text: 'Is it worth automating a task that only takes three minutes?' },
+      'Yes, if it repeats. Frequency, not duration, determines cost. A three-minute task done twelve times daily costs more per year than a two-hour task done monthly.',
+      { type: 'h3', text: 'How do I calculate the cost of a manual task?' },
+      'Minutes per instance × instances per day × people doing it × 230 working days ÷ 60 = annual hours. Multiply by loaded hourly cost (salary + roughly 20% for employer NI, pension and overhead, divided by about 1,700 productive hours).',
+    ],
+  },
   {
     slug: 'the-quietest-automations',
     title: 'The quietest automations are the most valuable',
