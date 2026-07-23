@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tristan-hoang-consultancy",
+  "name": "consultancy-website",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-05-12",
   "compatibility_flags": ["nodejs_compat"],
