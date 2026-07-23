@@ -22,6 +22,7 @@ export type BodyBlock =
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
+  | { type: 'cta'; before: string; linkText: string; href: string; after: string }
 
 export interface Post {
   slug: string
@@ -236,6 +237,87 @@ export const POSTS: Post[] = [
       'Reporting tells a person that something happened so they can act. Automation performs the action. Reporting leaves the work with you; automation removes it. Most requests framed as reporting are really requests for automation with the last step missing.',
       { type: 'h3', text: 'How do I know if a proposed build will actually get used?' },
       'Ask what the user will do differently within five minutes of seeing the output. If the answer is a concrete action, build the action. If the answer is vague, the build will be too.',
+    ],
+  },
+  {
+    slug: 'cutting-manual-logistics-work-teardown',
+    title: 'What cutting 70% of manual logistics work actually involved',
+    date: '2026-07-23',
+    readTime: '10 mins',
+    tag: 'Optimising for Manual Data Entry',
+    excerpt:
+      'A step-by-step breakdown of removing 70% of manual logistics coordination: what changed, what it saved, and the 30% that stayed manual on purpose.',
+    body: [
+      { type: 'h2', text: 'What was the process before?' },
+      'A coordination loop that ran on people copying information between systems that had no connection to each other, roughly [VERIFY: N] times a day.',
+      'The specifics, so this is a teardown rather than a claim — [VERIFY EVERY LINE]:',
+      {
+        type: 'ul',
+        items: [
+          'Context: in-house engineering at [EMPLOYER NAME — or: a European subscription business operating across multiple cities].',
+          'The loop: [VERIFY: describe the actual sequence — e.g. order/booking lands in system A → someone reads it → re-keys the relevant fields into system B → checks a third source for availability → emails or messages a confirmation → updates a spreadsheet someone else depends on].',
+          'Who did it: [VERIFY: how many people, what proportion of their week].',
+          'Time per instance: [VERIFY: minutes].',
+          'Failure mode: [VERIFY: what went wrong when it went wrong — missed handoffs, stale data, duplicate records, customers chased twice].',
+        ],
+      },
+      'None of this was anyone\'s fault. It is what happens when tools are adopted one at a time to solve one problem each, and the joins between them are left to humans by default.',
+      { type: 'h2', text: 'Where did the time actually go?' },
+      'Not where the team assumed. The visible task — the re-keying — was a minority of the cost. The majority was in reconciliation: checking whether the two systems agreed, and repairing them when they did not.',
+      'This is the part most automation proposals miss, and it is why "just connect the two tools" underdelivers. The measured split was roughly [VERIFY]:',
+      {
+        type: 'ul',
+        items: [
+          'Re-keying the data: the obvious cost, and the smaller one.',
+          'Verifying it landed correctly: opening the second system to confirm, because past failures had taught people not to trust it.',
+          'Repairing mismatches: finding the record that diverged, working out which version was right, fixing it — the single most expensive category, and entirely invisible in any job description.',
+          'Chasing humans: asking a colleague whether they had done their step yet.',
+        ],
+      },
+      'The reconciliation work exists because the loop had no source of truth. When two systems both hold a version of the same fact and neither is authoritative, every disagreement becomes an investigation.',
+      { type: 'h2', text: 'What changed?' },
+      'Three things, in order — and the order mattered more than any individual piece.',
+      {
+        type: 'ol',
+        items: [
+          'Established one authoritative record per entity. Before automating any transfer, we decided which system owned each fact. Everything else became a downstream copy that could be regenerated. This alone eliminated most reconciliation work, because disagreements stopped being ambiguous — one side was simply stale, and could be refreshed.',
+          'Replaced the transfer with an event-driven flow. Instead of a person noticing something and copying it, the originating system emitted an event and the downstream systems consumed it. [VERIFY: name the actual mechanism — webhook, queue, scheduled reconciliation job, whichever it was].',
+          'Made failures loud instead of silent. Every automated step that could fail reported when it did, to a named person, with the record ID attached. This is the step teams skip, and it is why some automation quietly makes things worse — silent failure is more expensive than manual work, because you find out weeks later.',
+        ],
+      },
+      'The engineering judgement worth naming: step one is not automation at all. It is a modelling decision. Skipping straight to step two — which is what most no-code implementations do — automates the transfer while leaving the reconciliation cost fully intact, and the measured saving comes in far below what was promised.',
+      { type: 'h2', text: 'What did the 70% not include?' },
+      'The exceptions — and they were left manual deliberately, not as a failure of scope.',
+      'Roughly [VERIFY: 30%] of instances involved a judgement no rule could safely encode: [VERIFY: e.g. an unusual request, a customer needing a decision made in their favour, a supplier failure requiring improvisation]. Attempting to automate those would have meant either a rule set too complex to maintain, or a system making decisions that ought to have a person\'s name attached.',
+      'So the design routed them out. Exceptions were detected early, flagged clearly, and handed to a human with the context already assembled — which is a real saving too, just not one that shows up as automation. The people handling the hard 30% stopped spending their time on the easy 70% first.',
+      'Any consultant promising to automate 100% of a coordination process is either scoping something simpler than they realise, or intending to hand you a rule engine you will be unable to change after they leave.',
+      { type: 'h2', text: 'How does this map to a lettings or recruitment agency?' },
+      'Directly — the structure is identical, only the nouns change. The same three steps apply wherever a business runs a coordination loop across systems that do not share a source of truth.',
+      {
+        type: 'ul',
+        items: [
+          'Lettings: an enquiry arrives, gets re-keyed into the property management system, checked against availability held somewhere else, confirmed by email, then recorded in a spreadsheet the lettings negotiator maintains privately. Same loop, same reconciliation cost.',
+          'Recruitment: a candidate lands from a job board, is re-entered into the ATS, cross-checked against roles held in a different tool, submitted to the client by email, then tracked in a personal pipeline sheet. Same loop.',
+          'Marketing agencies: a new client is set up in the CRM, then again in the project tool, then again in the accounting system, with the retainer scope living in a document none of them can see.',
+        ],
+      },
+      'In all three, the expensive part is not the typing. It is the fact that four places hold a version of the truth and none of them is authoritative.',
+      { type: 'h2', text: 'Frequently asked questions' },
+      { type: 'h3', text: 'How long does a project like this take?' },
+      '[VERIFY against your own scoping.] The modelling decision — establishing which system owns which fact — is typically the shortest phase in calendar time and the most consequential. The build is the predictable part; the mapping is where the value is decided.',
+      { type: 'h3', text: 'Can this be done with Zapier or Make?' },
+      'The transfer, often yes. The reconciliation and failure handling, rarely well. Those tools are excellent at moving a record from A to B and weak at answering "which of these two records is correct, and who needs to know it wasn\'t?" — which is where most of the cost sits.',
+      { type: 'h3', text: 'What is the first thing to fix?' },
+      'Decide which system is authoritative for each fact you care about. That decision costs nothing, requires no software, and determines whether everything built afterwards actually saves time.',
+      {
+        type: 'cta',
+        before: 'If your business runs a version of this loop — and most businesses with more than three tools do — a ',
+        linkText: 'Process Audit',
+        href: '/services',
+        after: ' maps it and puts a number on it before anything gets built.',
+      },
+      'Written by Tristan Hoang — automation and AI operations consultant, Bristol. Eight years building distributed systems and internal tooling for European retail and subscription businesses.',
+      'Last updated: 23/07/2026',
     ],
   },
   {

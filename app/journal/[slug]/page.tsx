@@ -161,14 +161,26 @@ export default async function PostPage({
               )
             }
 
+            if (block.type === 'ol') {
+              return (
+                <ol key={i} style={{ margin: '0 0 22px', paddingLeft: 22 }}>
+                  {block.items.map((item, j) => (
+                    <li key={j} style={{ marginBottom: 8 }}>
+                      {item}
+                    </li>
+                  ))}
+                </ol>
+              )
+            }
+
             return (
-              <ol key={i} style={{ margin: '0 0 22px', paddingLeft: 22 }}>
-                {block.items.map((item, j) => (
-                  <li key={j} style={{ marginBottom: 8 }}>
-                    {item}
-                  </li>
-                ))}
-              </ol>
+              <p key={i} style={{ margin: '0 0 22px' }}>
+                {block.before}
+                <Link href={block.href} className="footer-link" style={{ color: 'var(--navy)', fontWeight: 500 }}>
+                  {block.linkText}
+                </Link>
+                {block.after}
+              </p>
             )
           })}
         </div>

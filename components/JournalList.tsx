@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { POSTS } from '@/lib/data'
 import PostRow from './PostRow'
 
-const TAGS = ['All', 'Operations', 'Systems', 'AI', 'Tools', 'Cost-Savings']
+const TAGS = ['All', 'Operations', 'Systems', 'AI', 'Tools', 'Cost-Savings', 'Optimising for Manual Data Entry']
 
 export default function JournalList() {
   const [tag, setTag] = useState('All')
