@@ -334,58 +334,6 @@ export const POSTS: Post[] = [
       'The first pass usually identifies four or five tools that nobody can defend. The second pass, a week later, identifies another three or four whose function has been quietly absorbed by something else.',
     ],
   },
-  {
-    slug: 'llms-as-junior-analysts',
-    title: 'Treat LLMs like junior analysts, not senior engineers',
-    date: '2026-03-08',
-    readTime: '8 min',
-    tag: 'AI',
-    excerpt:
-      'A small mental model shift fixes most of the failure modes I see when teams try to put language models into production.',
-    body: [
-      'The mental model that gets teams in trouble is "the model is the product". Once you switch to "the model is a junior analyst on the team", most design decisions get easier.',
-      'You would not give a junior analyst write-access to your billing system on day one. You would not let them email a customer without a senior review. You would absolutely give them well-scoped, repetitive work with clear acceptance criteria: exactly the kind of work an LLM is good at.',
-      'Build the rails first. Worry about the model second.',
-    ],
-  },
-  {
-    slug: 'why-i-stopped-using-zapier-for-everything',
-    title: 'Why I stopped using Zapier for everything',
-    date: '2026-02-14',
-    readTime: '5 min',
-    tag: 'Tools',
-    excerpt:
-      'It is still the right starting point. It is rarely the right finishing point, and I have learned to be honest about that earlier.',
-    body: [
-      'Zapier is the right tool for the first three months of any automation problem. Past that, the things that made it fast at the start (the opaque connectors, the per-task pricing, the implicit ordering) become the things that slow you down.',
-      'My current default: prototype in Zapier or Make, then port anything that runs more than 5,000 times a month onto a small Python service with a proper queue. Boring, observable, owned by one person.',
-    ],
-  },
-  {
-    slug: 'a-quarterly-ops-review-template',
-    title: 'A quarterly ops review template I actually use',
-    date: '2026-01-19',
-    readTime: '3 min',
-    tag: 'Operations',
-    excerpt:
-      'Four questions, one page. It is not clever, but it has caught more drift than any dashboard I have built.',
-    body: [
-      'Every quarter, with every retained client, I run the same one-page review. Four questions: What broke? What got slower? What got faster? What did we stop measuring? That is the whole thing.',
-      'The fourth question is the one that earns its keep. Metrics that stop getting reviewed are almost always the canary for a process that has quietly gone sideways.',
-    ],
-  },
-  {
-    slug: 'on-saying-no-to-dashboards',
-    title: 'On saying no to dashboards',
-    date: '2025-12-02',
-    readTime: '4 min',
-    tag: 'Systems',
-    excerpt: 'The request is almost never actually for a dashboard. Find the decision underneath it.',
-    body: [
-      'When a client asks for "a dashboard", I have learned to ask one question before I write a line of SQL: what decision will this dashboard change?',
-      'About half the time, the honest answer is "none, I just want to feel like I am on top of it". That is a real need, but a dashboard is the wrong shape for it. A weekly written summary, or a single number in a Slack channel, is almost always better.',
-    ],
-  },
 ]
 
 export const GALLERY: GalleryItem[] = [
