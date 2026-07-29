@@ -320,20 +320,6 @@ export const POSTS: Post[] = [
       'Last updated: 23/07/2026',
     ],
   },
-  {
-    slug: 'tool-stacks-and-the-rule-of-seven',
-    title: 'Tool stacks and the rule of seven',
-    date: '2026-03-30',
-    readTime: '4 min',
-    tag: 'Systems',
-    excerpt:
-      'Most teams of 20 are paying for 40+ SaaS tools. Here is how I get that number back under control without a six-month migration.',
-    body: [
-      'Almost every mid-size team I work with has the same hidden problem: their stack grew faster than their headcount, and nobody has done a tidy-up in two years.',
-      'I run a 90-minute exercise I call "the rule of seven". Pull a list of every paid tool from finance. For each one, write down, in fewer than seven words, what would break if you cancelled it tomorrow. If you cannot, that is the answer.',
-      'The first pass usually identifies four or five tools that nobody can defend. The second pass, a week later, identifies another three or four whose function has been quietly absorbed by something else.',
-    ],
-  },
 ]
 
 export const GALLERY: GalleryItem[] = [
