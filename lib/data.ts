@@ -483,7 +483,7 @@ export const POSTS: Post[] = [
   {
     slug: 'cost-of-retyping-data-between-crm-and-accounting',
     title: 'The True Cost of Re-Typing Data Between Your CRM and Your Accounting Tool',
-    date: '2026-07-31',
+    date: '2026-07-30',
     readTime: '7 mins',
     tag: 'Cost-Savings',
     excerpt:
