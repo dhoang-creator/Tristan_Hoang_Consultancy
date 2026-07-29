@@ -26,7 +26,7 @@ function SectionEyebrow({ label }: { label: string }) {
 }
 
 export default function Journal() {
-  const preview = POSTS.slice(0, 3)
+  const preview = POSTS.slice(-3)
 
   return (
     <section id="journal" style={{ padding: '120px 36px', scrollMarginTop: 90 }}>
